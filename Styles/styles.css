@@ -66,31 +66,43 @@ body {
 }
 
 
+.cover-flow-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+
 .cover-flow-container {
-    width: 150%;
+    width: 100%;
+    max-width: 1500px;
     display: flex;
     align-items: center;
+    overflow: hidden; /* Optional: Hide overflowing content */
 }
 
 .cover-flow {
-    perspective: 1000px;
-    width: 100%;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    gap: 5px; /* Add spacing between covers */
+    overflow-x: auto; /* Allow horizontal scrolling */
+    scroll-behavior: smooth; /* Smooth scrolling effect */
+    padding: 10px; /* Optional: Add padding to the container */
 }
 
 .cover {
-    width: 150px; /* Adjust width for responsive design */
-    height: 800px; /* Adjust height for responsive design */
     background-size: cover;
     background-position: center;
     margin: 0 2px;
     transform: scale(0.7);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0.6;
+    flex-shrink: 0; /* Prevent covers from shrinking */
+    width: 450px; /* Adjust the width as needed */
+    height: 900px; /* Adjust the height as needed */
 }
 
+/* Active state for highlighted image */
 .cover.active {
     transform: scale(1) translateZ(50px);
     opacity: 1;
@@ -116,3 +128,4 @@ body {
 .nav-button.right {
     right: 0;
 }
+
