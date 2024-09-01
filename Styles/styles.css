@@ -1,0 +1,56 @@
+body {
+    background-color: #111;
+    margin: 0;
+    overflow: hidden;
+}
+
+.cover-flow-container {
+    width: 80%;
+    display: flex;
+    align-items: center;
+}
+
+.cover-flow {
+    perspective: 1000px;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cover {
+    width: 150px; /* Adjust width for responsive design */
+    height: 200px; /* Adjust height for responsive design */
+    background-size: cover;
+    background-position: center;
+    margin: 0 10px;
+    transform: scale(0.7);
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    opacity: 0.6;
+}
+
+.cover.active {
+    transform: scale(1) translateZ(50px);
+    opacity: 1;
+}
+
+.nav-button {
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 24px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+}
+
+.nav-button.left {
+    left: 0;
+}
+
+.nav-button.right {
+    right: 0;
+}
