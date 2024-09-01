@@ -171,6 +171,7 @@ body {
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     transition: left 0.3s ease;
+    z-index: 10; /* Ensure the details window is above the active cover */
 }
 
 .cover.active .cover-details {
