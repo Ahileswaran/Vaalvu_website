@@ -187,3 +187,76 @@ body {
 }
 
 
+/* Pricing Section*/
+.pricing-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+}
+
+.card-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+.price-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: #333;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    font-size: 1.5rem;
+}
+
+.price-circle span {
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.price-circle p {
+    margin: 0;
+    font-size: 0.75rem;
+}
+
+.pricing-card ul {
+    padding: 0;
+    list-style: none;
+}
+
+.pricing-card li {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+.pricing-card li i {
+    color: #007bff;
+    margin-right: 0.5rem;
+}
+
+.pricing-card:nth-child(1) .card-body {
+    background: linear-gradient(135deg, #a3a0fb, #5e60ce);
+    color: #fff;
+}
+
+.pricing-card:nth-child(2) .card-body {
+    background: linear-gradient(135deg, #f8961e, #f9c74f);
+    color: #fff;
+}
+
+.pricing-card:nth-child(3) .card-body {
+    background: linear-gradient(135deg, #56ccf2, #2f80ed);
+    color: #fff;
+}
