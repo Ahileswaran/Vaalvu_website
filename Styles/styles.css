@@ -93,6 +93,7 @@ body {
     transform: scale(0.7);
     transition: transform 0.5s ease, opacity 0.5s ease;
     opacity: 0.6;
+    z-index: 1; /* Default stacking order */
 }
 
 .cover.active {
@@ -102,6 +103,7 @@ body {
     height: 70%; /* Make the active image take the full height */
     object-fit: cover; /* Ensure the image covers the full container without stretching */
     transition: transform 0.5s ease, opacity 0.5s ease;
+    z-index: 5; /* Bring active cover in front of others */
 }
 
 
@@ -130,23 +132,53 @@ body {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
-    color: white;
+    color: black;
     opacity: 0; /* Hide by default */
     transition: opacity 0.5s ease;
+    background-color: rgba(192, 192, 192, 0.8); /* Light silver color */
+    padding: 5px 15px; /* Padding for pill shape */
+    border-radius: 20px; /* Rounded corners for pill shape */
+    text-align: center;
 }
 
 .cover-name {
-    top: -30px; /* Position above the image */
+    top: -40px; /* Position above the image */
     font-size: 1.2rem;
     font-weight: bold;
 }
 
 .cover-date {
-    bottom: -30px; /* Position below the image */
+    bottom: -40px; /* Position below the image */
     font-size: 1rem;
 }
 
 .cover.active .cover-name, 
 .cover.active .cover-date {
     opacity: 1; /* Show when the cover is active */
+}
+
+
+
+
+.cover-details {
+    display: none; /* Hide by default */
+    position: absolute;
+    top: 0;
+    left: 110%; /* Position to the right of the image */
+    width: 200px;
+    background-color: rgba(55, 175, 255, 0.9);
+    padding: 240px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: left 0.3s ease;
+}
+
+.cover.active .cover-details {
+    display: block; /* Show details when cover is active */
+}
+
+@media (max-width: 768px) {
+    .cover.active .cover-details {
+        left: -220px; /* Move details to the left side on smaller screens */
+    }
 }
