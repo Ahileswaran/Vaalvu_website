@@ -128,6 +128,8 @@ body {
     right: 0;
 }
 
+
+/* Name and date */
 .cover-name, .cover-date {
     position: absolute;
     left: 50%;
@@ -158,7 +160,7 @@ body {
 }
 
 
-
+/* Cover Detail window */
 
 .cover-details {
     display: none; /* Hide by default */
@@ -182,4 +184,16 @@ body {
     .cover.active .cover-details {
         left: -220px; /* Move details to the left side on smaller screens */
     }
+}
+
+
+/* Custom styles for specific height adjustments */
+.h-100 {
+    height: 200px; /* Fixed height for consistency */
+}
+
+/* Custom text styling adjustments, if needed */
+.details-section h5 {
+    margin-bottom: 10px;
+    font-weight: bold;
 }

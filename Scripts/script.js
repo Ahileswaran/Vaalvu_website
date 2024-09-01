@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const covers = document.querySelectorAll('.cover');
     let currentIndex = 0; // Start at the first cover
-    const displayTime = 20000; // 20 seconds per cover
+    const displayTime = 10000; // 20 seconds per cover
     const totalCovers = covers.length;
 
     function updateCovers(index) {
@@ -49,4 +49,41 @@ document.addEventListener('DOMContentLoaded', () => {
     setInterval(nextCover, displayTime);
 
     updateCovers(currentIndex); // Initial call to set up the first view
+});
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Select all cover elements
+    const covers = document.querySelectorAll('.cover');
+
+    // Add click event listener to each cover
+    covers.forEach(cover => {
+        cover.addEventListener('click', function () {
+            // Check if the clicked cover is active
+            if (cover.classList.contains('active')) {
+                // Retrieve the detail URL from data attribute
+                const detailUrl = cover.getAttribute('data-detail-url');
+                // Open the detail page
+                if (detailUrl) {
+                    window.location.href = detailUrl; // Redirect to the detail page
+                }
+            }
+        });
+    });
+});
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    const covers = document.querySelectorAll('.cover');
+
+    // Toggle active state on click
+    covers.forEach(cover => {
+        cover.addEventListener('click', function () {
+            // Remove active class from all covers
+            covers.forEach(c => c.classList.remove('active'));
+            // Add active class to clicked cover
+            cover.classList.add('active');
+        });
+    });
 });
