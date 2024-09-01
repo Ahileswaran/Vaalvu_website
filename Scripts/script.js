@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const covers = document.querySelectorAll('.cover');
     let currentIndex = 0; // Start at the first cover
-    const displayTime = 5000; // 20 seconds per cover
+    const displayTime = 8000; // 20 seconds per cover
     const totalCovers = covers.length;
 
     function updateCovers(index) {
