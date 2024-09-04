@@ -101,9 +101,9 @@ html, body {
 }
 
 
-/* COVER FLOWO CONTAINER */
+/* COVER FLOW CONTAINER */
 .cover-flow-container {
-    width: 150%;
+    width: 98%;
     display: flex;
     align-items: center;
 }
@@ -134,8 +134,8 @@ html, body {
 .cover.active {
     transform: scale(1.5); /* Adjust the scale as needed to make the image full size */
     opacity: 1;
-    width: 50%; /* Make the active image take the full width */
-    height: 70%; /* Make the active image take the full height */
+    width: 400%; /* Make the active image take the full width */
+    height: 60%; /* Make the active image take the full height */
     object-fit: cover; /* Ensure the image covers the full container without stretching */
     transition: transform 0.5s ease, opacity 0.5s ease;
     z-index: 5; /* Bring active cover in front of others */
