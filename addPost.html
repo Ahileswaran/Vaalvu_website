@@ -37,7 +37,6 @@
             border: 2px solid transparent;
             cursor: pointer;
             transition: border-color 0.3s;
-            width: 100%;
         }
         .frame-thumbnail:hover, .frame-thumbnail.selected {
             border-color: #007bff;
@@ -57,11 +56,6 @@
             height: 100%;
             pointer-events: none;
         }
-        @media (max-width: 576px) {
-            .photo-area {
-                padding: 10px;
-            }
-        }
     </style>
 </head>
 <body>
@@ -69,10 +63,11 @@
 <!-- Nav bar with Search -->
 <nav class="navbar navbar-expand-sm navbar-dark bg-dark">
     <div class="container-fluid">
-        <a class="navbar-brand d-flex align-items-center" href="index.html">
-            <!-- Logo Image -->
-            <img src="imgs/logo.png" alt="Vaalvu Logo" style="height: 50px; margin-right: 0px;">
-        </a>
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <!-- Logo Image -->
+                <img src="imgs/logo.png" alt="Vaalvu Logo" style="height: 50px; margin-right: 0px;">
+            </a>
+            
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mynavbar">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -99,11 +94,13 @@
     </div>
 </nav> 
 
+
 <!-- Offcanvas sidebar -->
 <div class="offcanvas offcanvas-start" tabindex="-1" id="demo">
     <div class="offcanvas-header">
         <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
     </div>
+
     <div class="offcanvas-body">
         <h4>Sort By Age</h4>
         <button type="button" class="btn btn-primary dropdown-toggle" data-bs-toggle="dropdown">
@@ -118,24 +115,51 @@
         <br>
         <h4>Find By Place</h4>
         <p>Colombo</p>
-        <!-- Add other places here -->
+        <p>Gampaha</p>
+        <p>Kandy</p>
+        <p>Kalutara</p>
+        <p>Kurunegala</p>
+        <p>Galle</p>
+        <p>Anuradhapura</p>
+        <p>Kegalle</p>
+        <p>Matara</p>
+        <p>Jaffna</p>
+        <p>Puttalam</p>
+        <p>Ampara</p>
+        <p>Batticaloa</p>
+        <p>Trincomalee</p>
+        <p>Badulla</p>
+        <p>Matale</p>
+        <p>Hambandota</p>
+        <p>Polonnaruwa</p>
+        <p>Monaragala</p>
+        <p>Vavuniya</p>
+        <p>Nuwara Eliya</p>
+        <p>Mannar</p>
+        <p>Kilinochchi</p>
+        <p>Mullaitivu</p>
+        <p>United States</p>
+        <p>United Kingdom</p>
+        <p>India</p>
+        <p>Japan</p>
     </div>
 </div>
 
 <!-- Add Post Section -->
 <div class="container mt-5">
     <div class="row">
-        <div class="col-md-4 col-sm-12">
+        <div class="col-md-4">
             <div class="photo-area add-photo-container">
                 <img id="selectedPhoto" src="path/to/default-photo.jpg" alt="Add Photo">
                 <img id="frameOverlay" class="frame-overlay" src="" alt="">
                 <input type="file" class="form-control mt-3" id="uploadPhoto" accept="image/*" onchange="loadPhoto(event)">
             </div>
         </div>
-        <div class="col-md-8 col-sm-12">
+        <div class="col-md-8">
             <div class="photo-area">
                 <label class="form-label">Select Photo Frames</label>
                 <div class="row g-2">
+                    <!-- Replace src values with the actual paths to your frame images -->
                     <div class="col-4">
                         <img src="frame/frame1.png" class="img-fluid frame-thumbnail" onclick="selectFrame('path/to/frame1.png')" alt="Frame 1">
                     </div>
@@ -154,11 +178,11 @@
     <div class="form-container mt-4">
         <form>
             <div class="row mb-3">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6">
                     <label for="fullName" class="form-label">Full Name:</label>
                     <input type="text" class="form-control" id="fullName" placeholder="Enter full name">
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6">
                     <label for="causeOfDeath" class="form-label">Cause of Death:</label>
                     <input type="text" class="form-control" id="causeOfDeath" placeholder="Enter cause of death">
                 </div>
@@ -168,11 +192,11 @@
                 <input type="text" class="form-control" id="address" placeholder="Enter address">
             </div>
             <div class="row mb-3">
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6">
                     <label for="spouse" class="form-label">Spouse:</label>
                     <input type="text" class="form-control" id="spouse" placeholder="Enter spouse name">
                 </div>
-                <div class="col-md-6 col-sm-12">
+                <div class="col-md-6">
                     <label for="childrenNames" class="form-label">Children's Names:</label>
                     <input type="text" class="form-control" id="childrenNames" placeholder="Enter children's names">
                 </div>

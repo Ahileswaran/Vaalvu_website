@@ -4,12 +4,47 @@ body {
     color: #f0f0f0; /* Light text color for readability */
     margin: 0;
     overflow: hidden;
-    font-family: Arial, sans-serif; /* Optional: Set a default font */
+    font-family: Arial, sans-serif; 
+}
+
+
+
+/* Main content adjustments to ensure vertical scrolling */
+html, body {
+    height: 100%; 
+    overflow-y: auto; 
+}
+
+/* Remove the scroll-container class as it is no longer needed */
+.scroll-container {
+    max-height: none; 
+    overflow: visible; 
 }
 
 /* Navbar Dark Theme */
 .navbar {
-    background-color: #222 !important; /* Darker background for the navbar */
+    background-color: #222 !important; 
+}
+
+/* Offcanvas Dark Theme */
+.offcanvas {
+    background-color: #222 !important; 
+    color: #f0f0f0 !important; 
+}
+
+/* Additional media query adjustments */
+@media (max-width: 576px) {
+    .photo-area, .form-container {
+        padding: 10px; 
+    }
+}
+
+
+
+
+/* Navbar Dark Theme */
+.navbar {
+    background-color: #222 !important; 
 }
 
 /* Offcanvas Dark Theme */
@@ -66,16 +101,16 @@ body {
 }
 
 
-/* COVER FLOW CONTAIRE */
+/* COVER FLOWO CONTAINER */
 .cover-flow-container {
-    width: 110%;
+    width: 150%;
     display: flex;
     align-items: center;
 }
 
 .cover-flow {
     width: 100%;
-    height: 80vh; /* Set height to viewport height to allow full coverage */
+    height: 100vh; /* Set height to viewport height to allow full coverage */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -259,35 +294,4 @@ body {
 .pricing-card:nth-child(3) .card-body {
     background: linear-gradient(135deg, #56ccf2, #2f80ed);
     color: #fff;
-}
-
-
-
-/* Responsive Photo Area */
-.photo-area img {
-    max-width: 100%;
-    height: auto;
-}
-
-/* Responsive Frame Thumbnails */
-.frame-thumbnail {
-    width: 100%;
-    max-width: 100px; /* Limit maximum size for thumbnails */
-}
-
-@media (max-width: 576px) {
-    .photo-area {
-        padding: 10px;
-    }
-}
-
-/* Responsive Adjustments for the Cover Flow Section */
-.cover-flow-container {
-    width: 100%; /* Make sure it fits within screen width */
-}
-
-.cover {
-    width: 100%;
-    height: auto;
-    transition: transform 0.5s ease, opacity 0.5s ease;
 }
