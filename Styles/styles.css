@@ -68,14 +68,14 @@ body {
 
 
 .cover-flow-container {
-    width: 110%;
+    width: 100%;
     display: flex;
     align-items: center;
 }
 
 .cover-flow {
     width: 100%;
-    height: 80vh; /* Set height to viewport height to allow full coverage */
+    height: 100vh; /* Set height to viewport height to allow full coverage */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -85,8 +85,8 @@ body {
 
 
 .cover {
-    width: 150px; /* Adjust width for responsive design */
-    height: 800px; /* Adjust height for responsive design */
+    width: 120px; /* Adjust width for responsive design */
+    height: 700px; /* Adjust height for responsive design */
     background-size: cover;
     background-position: center;
     margin: 0 10px;
