@@ -68,7 +68,7 @@ body {
 
 
 .cover-flow-container {
-    width: 100%;
+    width: 120%;
     display: flex;
     align-items: center;
 }
